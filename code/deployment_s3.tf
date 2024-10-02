@@ -5,6 +5,10 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   bucket        = "${local.resource_prefix.value}-data"
   force_destroy = true
+
+  tags = {
+    env           = "Production"
+  } 
   
 }
 
@@ -23,6 +27,9 @@ resource "aws_s3_bucket" "financials" {
   acl           = "private"
   force_destroy = true
 
+  tags = {
+    environment           = "Production"
+  } 
 }
 
 resource "aws_s3_bucket" "operations" {
