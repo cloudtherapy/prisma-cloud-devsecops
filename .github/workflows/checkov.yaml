@@ -21,7 +21,7 @@ jobs:
       uses: bridgecrewio/checkov-action@master
       with:
         directory: code/
-        soft_fail: true
+        #soft_fail: true
         api-key: ${{ secrets.BC_API_KEY }}
         use_enforcement_rules: true
       env:
