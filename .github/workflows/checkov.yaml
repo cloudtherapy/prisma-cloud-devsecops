@@ -10,7 +10,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest 
     permissions:
-      contents: read # for actions/checkout to fetch code
+      contents: read # for actions/checkout to fetch code and run
       security-events: write # for GitHub/codeql-action/upload-sarif to upload SARIF results
      
     steps:
